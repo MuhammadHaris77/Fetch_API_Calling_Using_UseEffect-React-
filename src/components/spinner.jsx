@@ -1,10 +1,29 @@
 import Spinner from 'react-bootstrap/Spinner';
-
+import { Button } from 'react-bootstrap';
 function SpinnerRound() {
   return (
-    <Spinner className='container my-auto' animation="border" role="status">
-      <span className="visually-hidden d-flex justify-content-center">Loading...</span>
-    </Spinner>
+    <>
+    <Button variant="dark" disabled>
+      <Spinner
+        as="span"
+        animation="border"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+      />
+      <span className="visually-hidden">Loading...</span>
+    </Button>{' '}
+    <Button variant="dark" disabled>
+      <Spinner
+        as="span"
+        animation="grow"
+        size="sm"
+        role="status"
+        aria-hidden="true"
+      />
+      Loading...
+    </Button>
+  </>
   );
 }
 

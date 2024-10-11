@@ -6,7 +6,7 @@ import BasicExample from "../src/components/card"
 import SpinnerRound from './components/spinner'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNavbar from './components/navbar'
-
+import ErrorModal from './components/errorModal'
 
 
 function App() {
@@ -56,10 +56,7 @@ function App() {
           })
       }
 
-      {error &&
-        <div className='container'>
-          <h1 className='mt-4 pt-5'>PAGE NOT FOUND</h1>
-        </div>
+      {error && <ErrorModal/>
       }
     </div>
   )
