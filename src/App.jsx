@@ -38,7 +38,7 @@ function App() {
   console.log(getusers)
 
   return (
-    <div >
+    <>
       {getusers && <MainNavbar />}
       {loading && <SpinnerRound />}
       {
@@ -58,7 +58,7 @@ function App() {
 
       {error && <ErrorModal/>
       }
-    </div>
+    </>
   )
 }
 

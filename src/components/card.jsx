@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 function BasicExample({ item }) {
     return (
 
-            <Card className=' px-2 m-2 ' key={item.id} style={{ width: '18rem' }} >
+            <Card className=' px-2 m-2 ' key={item.id} style={{ width: '22rem' }} >
                 <Card.Img variant="top" height={140} width={30} src={item.thumbnail} />
                 <Card.Body>
                     <Card.Title >{item.title}</Card.Title>
@@ -17,8 +17,14 @@ function BasicExample({ item }) {
                     <Card.Text>
                         <b>Category : </b>{item.category}     
                     </Card.Text>
+                    <Card.Text>
+                        <b>Price : </b>{item.price}     
+                    </Card.Text>
+                    <Card.Text>
+                        <b>Rating : </b>{item.rating}     
+                    </Card.Text>
 
-                    <Button variant="warning">ADD TO CART</Button>
+                    <Button variant="warning"  >ADD TO CART</Button>
                 </Card.Body>
             </Card>
 
